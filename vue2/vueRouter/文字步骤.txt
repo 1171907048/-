@@ -39,6 +39,7 @@ $router 全局都一样，是路由的共用方法
  router-link
 配置 to 属性指定路径(必须) 。本质还是a 标签，to 无需 #
 to后面可以是path或name
+在App.vue中必须删除其他代码，只加上<router-view></router-view>
  优点：简单直观，通过在模板中编写导航链接，不需要编写额外的Js代码。
 编程式导航     this.$router.push('/')  优点：可以在Js代码中根据条件或动态数据进行导航，更加灵活和可控。
 
