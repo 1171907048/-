@@ -1,0 +1,74 @@
+1.flex 布局（子元素无宽高同样适用）
+    .allCenter{ /*父元素*/
+        display: flex;/*flex布局 */
+        justify-content: center;/* 水平居中 */
+        align-items: center;/* 垂直居中 */
+    }
+2.flex布局
+    allCenter{/*父元素*/
+        display: flex;/*flex布局 */
+    }
+    .allCenterChild{/*子元素*/
+        margin:auto;/*上下左右边界自动*/
+    }
+3.flex布局
+    .allCenter{/*父元素*/
+        display: flex;/*flex布局 */
+    }
+    .allCenterChild{/*子元素*/
+        align-self: center;/*脱离父元素给他的样式，实现垂直居中 */
+        margin:0 auto;/*上下无边距，左右边距自动，实现水平居中 */
+    }
+4.grid布局
+ .allCenter{/*父元素*/
+    display: grid;/*grid布局*/
+  }
+.allCenterChild{/*子元素*/
+    justify-self: center;/*水平居中*/
+    align-self: center;/*垂直居中*/
+}
+5. margin
+    .allCenterChild{/*子元素*/
+        margin:calc(50% - 75px) auto 0 auto; /*左右边自动实现水平居中 ，上边距50%-子元素高度的一半*/
+    }  
+6.绝对定位
+.allCenter{/*父元素*/
+        position: relative;/*相对定位*/
+    }
+.allCenterChild{/*子元素*/
+    position: absolute;/*绝对定位*/
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin: auto;
+}
+7.绝对定位（子元素无宽高同样适用）
+.allCenter{/*父元素*/
+    position: relative;/*相对定位*/
+}
+.allCenterChild{/*子元素*/
+    position: absolute;/*绝对定位*/
+    left:50%;
+    top:50%;/*子元素左上角在父元素的中心点*/
+    transform: translate(-50%,-50%);/*将子元素左移自身的一半，上移自身的一半*/
+}
+8.表格布局
+.allCenter{/*父元素*/
+    display: table-cell;/*表格布局*/
+    vertical-align: middle;/*垂直居中*/
+    text-align: center;/*水平居中（但只对行级元素生效）*/
+}
+.allCenterChild{/*子元素*/
+    display: inline-block;/*转行级元素*/
+} 
+9.只针对一行文字垂直居中
+.wrap{
+    text-align: center;/*文字水平居中*/
+    line-height: 100px;/*行高跟父元素一致，实现垂直居中*/
+}
+10.多行文字垂直居中
+.wrap{
+    display: table-cell;/*table布局*/
+    vertical-align: middle;/*垂直居中*/
+}
